@@ -15,7 +15,6 @@ import "./util";
 import "../index.css";
 import { useInView } from "framer-motion";
 
-// import { Image } from "./Image2";
 
 export const Skills = () => {
   const ref = useRef();
@@ -28,18 +27,12 @@ export const Skills = () => {
         ref={ref}
       >
         <fog attach="fog" args={["#a79", 8.5, 12]} />
-
-        <ScrollControls pages={4} style={{ scrollbarWidth: "none" }}>
+        <ScrollControls pages={4} style={{ scrollbarWidth: "none" }} horizontal infinite>
           <Rig rotation={[0, 0, 0.15]}>
             <Carousel />
           </Rig>
           <Banner position={[0, -0.15, 0]} />
         </ScrollControls>
-        {/* <Rig rotation={[0, 0, 0.15]}>
-          <Carousel />
-        </Rig> */}
-
-        {/* <Environment preset="dawn" background blur={0.5} /> */}
       </Canvas>
     </div>
   );

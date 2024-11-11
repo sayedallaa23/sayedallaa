@@ -117,7 +117,7 @@ function Performance() {
   const isInView = useInView(performanceRef, { amount: 0.7 });
 
   return (
-    <div className="flex flex-col justify-between md:flex-row bg-black/[0.96] relative">
+    <div className="relative flex flex-col justify-between md:flex-row">
       <div className="w-[20%] ml-[1rem]">
         <div className="absolute top-[4rem] ml-[1rem]">
           <FlipWordsDemo />

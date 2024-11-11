@@ -5,8 +5,8 @@ import { SpotlightPreview } from "./components/Header";
 import { Skills } from "./components/Skills";
 import Performance from "./components/Performance";
 import TimeLines from "./components/TimeLines";
-import LockScene from "./components/LockScene";
 import Projects from "./components/Projects";
+import { BackgroundBeamsWithCollisionDemo } from "./components/BackgroundBeamsWithCollisionDemo";
 // studio.initialize();
 // studio.extend(extension);
 
@@ -15,18 +15,18 @@ import Projects from "./components/Projects";
 function App() {
   const sceneContext = useContext(LaptopContext);
 
-  return (
-    // <ContextProvider>
-    <div className="w-screen bg-black/[0.96]">
-      {/* <LaptopScene />
+  return (   
+    <div className="w-screen">
+      <LaptopScene />
       <div
         className={`absolute top-0 left-0 ${
           sceneContext.showModel ? "hidden" : "flex flex-col"
         } overflow-hidden `}
-      > */}
-      <div>
+      >
+        {/* <div> */}
+        <div className="mainbody">
         <SpotlightPreview />
-        <div className="bg-black/[0.96] h-[98vh] text-center">
+        <div className="text-center">
           <h1 className="text-4xl font-bold text-center text-transparent bg-opacity-50 md:text-6xl bg-clip-text bg-gradient-to-b from-neutral-50 to-neutral-400">
             My Skills
           </h1>
@@ -45,12 +45,12 @@ function App() {
         <div className="md:mt-[4rem]">
           <Performance />
         </div>
-        <TimeLines/>
-        {/* <LockScene/> */}
-        <Projects/>
+        <TimeLines />
+        <Projects />
+        <BackgroundBeamsWithCollisionDemo />
+        </div>
       </div>
     </div>
-    // </ContextProvider>
   );
 }
 export default App;

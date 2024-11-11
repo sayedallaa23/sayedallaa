@@ -1,17 +1,12 @@
 import React, {
-  useEffect,
   useRef,
-  useState,
-  useContext,
-  createContext,
 } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import {
   useGLTF,
   Environment,
   PerspectiveCamera,
-  useAnimations,
-  OrbitControls,
+  PresentationControls,
 } from "@react-three/drei";
 import * as THREE from "three";
 
@@ -22,7 +17,6 @@ function Model({ path, povState }) {
 
   useFrame((state, delta) => {
     earthRef.current.rotation.y += 0.001;
-    // earthRef.current.rotation.x += 0.00015;
   });
 
   return (
@@ -47,12 +41,18 @@ function TimeLines() {
       <div className="h-[100vh] w-[50%]">
         <Canvas>
           <PerspectiveCamera position={[0, 0, 1.5]} makeDefault />
-          {/* <OrbitControls/> */}
           <Environment preset="studio" />
-          {/* <pointLight position={[0, 20, 0]} intensity={1} />
-          <pointLight position={[0, -20, 0]} intensity={1} />
-          <pointLight position={[0, 0, 10]} intensity={20} /> */}
-          <Model path="/earth2.glb" povState={true} />
+          <PresentationControls
+            global
+            config={{ mass: 2, tension: 500 }}
+            snap={{ mass: 4, tension: 1500 }}
+            rotation={[0, 0.3, 0]}
+            polar={[-Math.PI / 3, Math.PI / 3]}
+            azimuth={[-Math.PI / 1.4, Math.PI / 2]}
+            speed={.25}
+          >
+            <Model path="/earth2.glb" povState={true} />
+          </PresentationControls>
         </Canvas>
       </div>
     </div>
