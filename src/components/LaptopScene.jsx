@@ -32,8 +32,9 @@ if (import.meta.env.DEV) {
   studio.initialize();
   studio.extend(extension);
 }
+import demoProjectState from './th.json'
 
-const demoSheet = getProject("Demo Project").sheet("Demo Sheet");
+const demoSheet = getProject("Demo Project", { state: demoProjectState }).sheet("Demo Sheet");
 
 function Model({ open, hinge, showModel, setShowModel, ...props }) {
   const group = useRef();
