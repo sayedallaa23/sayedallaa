@@ -113,7 +113,7 @@ function Performance() {
   );
 
   return (
-    <div className="flex justify-between h-[50vh] lg:h-[100vh]">
+    <div className="flex justify-between h-[80vh] lg:h-[100vh]">
       <div className="ml-[2rem] mt-[4rem]">
         <div className="">
           <div className="md:mb-[6rem] mb-[8rem]">
