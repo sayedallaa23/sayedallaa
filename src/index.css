@@ -59,6 +59,7 @@ html {
   scroll-behavior: smooth;
   overflow-x: hidden;
   background-color: rgba(0, 0, 0, 0.96);
+  font-family: "Geist", sans-serif !important ;
 }
 
 

@@ -27,9 +27,9 @@ function Model({ path, povState }) {
 }
 function TimeLines() {
   return (
-    <div className="flex items-center justify-between gap-x-10">
+    <div className="flex items-center justify-between gap-x-10 mt-[4rem]">
       <div className="w-[50%]  ml-[2rem]">
-        <h1 className="font-bold text-transparent bg-opacity-50 md:text-6xl bg-clip-text bg-gradient-to-b from-neutral-50 to-neutral-400">
+        <h1 className="font-bold text-transparent bg-opacity-50 md:text-6xl bg-clip-text bg-gradient-to-b from-neutral-50 to-neutral-400 text-[1.5rem]">
           Global Expertise, Local Impact
         </h1>
         <p className="mt-[2rem] text-neutral-600">
@@ -38,7 +38,7 @@ function TimeLines() {
           delivering high-quality results on time and on budget.
         </p>
       </div>
-      <div className="h-[100vh] w-[50%]">
+      <div className="h-[30vh] xl:h-[100vh] w-[50%]">
         <Canvas>
           <PerspectiveCamera position={[0, 0, 1.5]} makeDefault />
           <Environment preset="studio" />

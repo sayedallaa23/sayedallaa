@@ -16,8 +16,6 @@ import { useInView } from "framer-motion";
 import * as THREE from "three";
 import { FlipWordsDemo } from "./FlipWordsDemo";
 
-
-
 function Model({ path, povState }) {
   const { scene, animations } = useGLTF(path);
   const { actions } = useAnimations(animations, scene);
@@ -25,7 +23,6 @@ function Model({ path, povState }) {
   const primeRef = useRef();
   const light = useRef();
   const hoverContext = useContext(lightContext);
-
 
   useFrame((state, delta) => {
     if (povState && !rotationReached) {
@@ -43,19 +40,16 @@ function Model({ path, povState }) {
       actions["Change form"].setLoop(THREE.LoopOnce, 1);
       primeRef.current.rotation.y = -1;
       setRotationReached(false);
-    }
-    else {
+    } else {
       actions["Change form"].reset().stop();
       primeRef.current.rotation.y = -1;
       setRotationReached(false);
     }
   }, [povState]);
 
-
-
   return (
     <mesh
-      position={[50, 0, 0]}
+      position={[0, 0, 0]}
       ref={primeRef}
       rotation={[0, -1, 0]}
       onPointerOver={(e) => {
@@ -80,7 +74,6 @@ function LightWithMouse() {
       lightRef.current.position.x = mouse.x * 300;
       lightRef.current.position.y = 10;
       lightRef.current.position.z = mouse.y * 300;
-
     }
   });
 
@@ -117,18 +110,22 @@ function Performance() {
   const isInView = useInView(performanceRef, { amount: 0.7 });
 
   return (
-    <div className="relative flex flex-col justify-between md:flex-row">
-      <div className="w-[20%] ml-[1rem]">
-        <div className="absolute top-[4rem] ml-[1rem]">
-          <FlipWordsDemo />
+    <div className="flex justify-between h-[50vh] lg:h-[100vh]">
+      <div className="ml-[2rem] mt-[4rem]">
+        <div className="">
+          <div className="mb-[6rem]">
+            <FlipWordsDemo />
+          </div>
+          <div className="w-[100%] md:w-[70%]">
+            <p className=" text-neutral-600">
+              I love creating high-performance, visually appealing websites that
+              deliver a seamless user experience. I optimize speed,
+              functionality, and design to meet customer needs and preferences.
+            </p>
+          </div>
         </div>
-        <p className="absolute top-[13rem] w-[40%] ml-[2rem] text-neutral-600">
-          I love creating high-performance, visually appealing websites that
-          deliver a seamless user experience. I optimize speed, functionality,
-          and design to meet customer needs and preferences.
-        </p>
       </div>
-      <div className="h-[100vh] w-[100vw]">
+      <div className="h-[35vh] md:h-[50vh]  lg:h-[100vh] w-[50vw]">
         <LightContextProvider>
           <Canvas ref={performanceRef}>
             <PerspectiveCamera position={[0, 35, 110]} makeDefault />

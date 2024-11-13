@@ -5,34 +5,39 @@ import { useRef, useState, useEffect } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import {
   Image,
-  Environment,
-  ScrollControls,
   useScroll,
   useTexture,
+  PresentationControls,
 } from "@react-three/drei";
 import { easing } from "maath";
 import "./util";
 import "../index.css";
 import { useInView } from "framer-motion";
 
-
 export const Skills = () => {
   const ref = useRef();
   const isInView = useInView(ref, { amount: 0.8 });
 
   return (
-    <div className="w-[100vw] h-[100vh] scrollable-element">
-      <Canvas
-        camera={{ position: [0, 0, 100], fov: 15 }}
-        ref={ref}
-      >
+    <div className="w-[100vw] h-[30vh] xl:h-[100vh] scrollable-element">
+      <Canvas camera={{ position: [0, 0, 100], fov: 15 }} ref={ref}>
         <fog attach="fog" args={["#a79", 8.5, 12]} />
-        <ScrollControls pages={4} style={{ scrollbarWidth: "none" }} horizontal infinite>
+        {/* <ScrollControls pages={4} style={{ scrollbarWidth: "none" }} horizontal infinite> */}
+        <PresentationControls
+          global
+          config={{ mass: 2, tension: 500 }}
+          snap={{ mass: 4, tension: 1500 }}
+          rotation={[0, 0.3, 0]}
+          polar={[-Math.PI / 3, Math.PI / 3]}
+          azimuth={[-Math.PI / 1.4, Math.PI / 2]}
+          speed={0.25}
+        >
           <Rig rotation={[0, 0, 0.15]}>
             <Carousel />
           </Rig>
           <Banner position={[0, -0.15, 0]} />
-        </ScrollControls>
+        </PresentationControls>
+        {/* </ScrollControls> */}
       </Canvas>
     </div>
   );
@@ -42,7 +47,7 @@ function Rig(props) {
   const ref = useRef();
   const scroll = useScroll();
   useFrame((state, delta) => {
-    ref.current.rotation.y = -scroll?.offset * (Math.PI * 2); // Rotate contents
+    // ref.current.rotation.y = -scroll?.offset * (Math.PI * 2); // Rotate contents
     state.events.update(); // Raycasts every frame rather than on pointer-move
     easing.damp3(
       state.camera.position,
@@ -56,18 +61,27 @@ function Rig(props) {
 }
 
 function Carousel({ radius = 1.4, count = 8 }) {
-  return Array.from({ length: count }, (_, i) => (
-    <Card
-      key={i}
-      url={`/img${Math.floor(i % 10) + 1}_.jpg`}
-      position={[
-        Math.sin((i / count) * Math.PI * 2) * radius,
-        0,
-        Math.cos((i / count) * Math.PI * 2) * radius,
-      ]}
-      rotation={[0, (i / count) * Math.PI * 2, 0]}
-    />
-  ));
+  const ref = useRef();
+
+  useFrame((state, delta) => {
+    ref.current.rotation.y += delta * -0.2; // Adjust the rotation speed as needed
+  });
+  return (
+    <group ref={ref}>
+      {Array.from({ length: count }, (_, i) => (
+        <Card
+          key={i}
+          url={`/img${Math.floor(i % 10) + 1}_.jpg`}
+          position={[
+            Math.sin((i / count) * Math.PI * 2) * radius,
+            0,
+            Math.cos((i / count) * Math.PI * 2) * radius,
+          ]}
+          rotation={[0, (i / count) * Math.PI * 2, 0]}
+        />
+      ))}
+    </group>
+  );
 }
 
 function Card({ url, ...props }) {
@@ -107,7 +121,7 @@ function Banner(props) {
   texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
   const scroll = useScroll();
   useFrame((state, delta) => {
-    ref.current.material.time.value += Math.abs(scroll.delta) * 4;
+    // ref.current.material.time.value += Math.abs(scroll.delta) * 4;
     ref.current.material.map.offset.x += delta / 2;
   });
   return (

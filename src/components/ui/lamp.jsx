@@ -15,7 +15,7 @@ export function LampDemo() {
           ease: "easeInOut",
         }}
         className="py-4 mt-8 text-4xl font-medium tracking-tight text-center text-transparent bg-gradient-to-br from-slate-300 to-slate-500 bg-clip-text md:text-7xl">
-        Build lamps <br /> the right way
+         Projects samples
       </motion.h1>
     </LampContainer>)
   );
@@ -28,7 +28,7 @@ export const LampContainer = ({
   return (
     (<div
       className={cn(
-        "relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-slate-950 w-full rounded-md z-0",
+        "relative flex h-[50vh] lg:min-h-screen flex-col items-center justify-center overflow-hidden bg-slate-950 w-full rounded-md z-0",
         className
       )}>
       <div

@@ -4,16 +4,16 @@ import { FaSquareInstagram ,FaSquareGithub,FaSquareWhatsapp } from "react-icons/
 function Socials() {
   return (
     <div className="flex gap-2">
-      <a href="https://www.facebook.com/sayed.allaa/">
+      <a href="https://www.facebook.com/sayed.allaa/" target="_blank">
         <FaSquareFacebook className="text-[50px] text-[#adadad]" />
       </a>
-      <a href="https://www.instagram.com/sayed_allaa/">
+      <a href="https://www.instagram.com/sayed_allaa/" target="_blank">
       <FaSquareInstagram  className="text-[50px] text-[#adadad]" />
       </a>
-      <a href="https://github.com/sayedallaa23">
+      <a href="https://github.com/sayedallaa23" target="_blank">
       <FaSquareGithub  className="text-[50px] text-[#adadad]" />
       </a>
-      <a href="https://wa.me/201009847506">
+      <a href="https://wa.me/201009847506" target="_blank">
       <FaSquareWhatsapp  className="text-[50px] text-[#adadad]"  />
       </a>
     </div>
