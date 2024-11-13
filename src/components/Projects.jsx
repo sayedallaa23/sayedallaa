@@ -6,7 +6,7 @@ function Projects() {
   return (
     <div>
         <h1></h1>
-        <div className='relative h-[110vh] md:h-[90vh] lg:h-[160vh] mt-[4rem]'>
+        <div className='relative h-[115vh] md:h-[90vh] lg:h-[160vh] mt-[4rem]'>
             <LampDemo/>
             <div className='absolute bottom-0 left-0 w-[100%]'>
                 <div className='items-start justify-center hidden gap-4 mx-auto md:flex'>

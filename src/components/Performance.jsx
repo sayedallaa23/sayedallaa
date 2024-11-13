@@ -108,12 +108,15 @@ function LightContextProvider({ children }) {
 function Performance() {
   const performanceRef = useRef();
   const isInView = useInView(performanceRef, { amount: 0.7 });
+  const [isMobile, setIsMobile] = useState(
+    typeof window !== "undefined" && window.innerWidth < 700
+  );
 
   return (
     <div className="flex justify-between h-[50vh] lg:h-[100vh]">
       <div className="ml-[2rem] mt-[4rem]">
         <div className="">
-          <div className="mb-[6rem]">
+          <div className="md:mb-[6rem] mb-[8rem]">
             <FlipWordsDemo />
           </div>
           <div className="w-[100%] md:w-[70%]">
@@ -129,7 +132,7 @@ function Performance() {
         <LightContextProvider>
           <Canvas ref={performanceRef}>
             <PerspectiveCamera position={[0, 35, 110]} makeDefault />
-            <Environment preset="night" />
+            <Environment preset={isMobile?"forest":"night"} />
             <LightWithMouse />
             <pointLight position={[10, 20, 0]} intensity={0.3} />
             <pointLight position={[10, -20, 0]} intensity={0.3} />
