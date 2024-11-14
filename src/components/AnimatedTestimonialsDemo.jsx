@@ -7,26 +7,25 @@ export function AnimatedTestimonialsDemo() {
         "PopcornTV is a movie and TV platform , offering a wide database of films and series with synopses, ratings, and personalized recommendations.",
       name: "Sarah Chen",
       designation: "PopcornTV",
-      src: "/popcorn2-min.png",
-      link:"https://popcorn-tv-seven.vercel.app/"
+      src: "/popcorn22.jpg",
+      link: "https://popcorn-tv-seven.vercel.app/",
     },
     {
       quote:
         "PopcornTV is a movie and TV platform , offering a wide database of films and series with synopses, ratings, and personalized recommendations.",
       name: "Michael Rodriguez",
       designation: "PopcornTV",
-      src: "/popcorn2-min.png",
-      link:"https://popcorn-tv-seven.vercel.app/"
+      src: "/popcorn22.jpg",
+      link: "https://popcorn-tv-seven.vercel.app/",
     },
     {
       quote:
         "Kicks is an e-commerce site for shoes, featuring a variety of styles, easy navigation, and customer reviews.",
       name: "Emily Watson",
       designation: "Kicks",
-      src: "/kicks-min.png",
-      link:"https://kicks-kappa.vercel.app/"
+      src: "/kicks22.jpg",
+      link: "https://kicks-kappa.vercel.app/",
     },
-    
   ];
   return <AnimatedTestimonials testimonials={testimonials} />;
 }
