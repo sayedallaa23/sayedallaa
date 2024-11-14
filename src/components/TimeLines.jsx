@@ -52,7 +52,7 @@ function TimeLines() {
             azimuth={[-Math.PI / 1.4, Math.PI / 2]}
             speed={.25}
           >
-            <Model path="/earth2.glb" povState={true} />
+            <Model path="/earth3.glb" povState={true} />
           </PresentationControls>
         </Canvas>
       </div>

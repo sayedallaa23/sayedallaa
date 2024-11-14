@@ -113,7 +113,7 @@ function Performance() {
   );
 
   return (
-    <div className="flex justify-between h-[80vh] lg:h-[100vh]">
+    <div className="flex justify-between h-[100dvh] lg:h-[100vh]">
       <div className="ml-[2rem] mt-[4rem]">
         <div className="">
           <div className="md:mb-[6rem] mb-[8rem]">
@@ -137,7 +137,7 @@ function Performance() {
             <LightWithMouse />
             <pointLight position={[10, 20, 0]} intensity={0.3} />
             <pointLight position={[10, -20, 0]} intensity={0.3} />
-            <Model path={"/prime.glb"} povState={isInView} />
+            <Model path={"/prime2.glb"} povState={isInView} />
           </Canvas>
         </LightContextProvider>
       </div>
