@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import LaptopScene from "./components/LaptopScene";
 import ContextProvider, { LaptopContext } from "./store/LaptopContext";
 import { SpotlightPreview } from "./components/Header";
@@ -7,7 +7,7 @@ import Performance from "./components/Performance";
 import TimeLines from "./components/TimeLines";
 import Projects from "./components/Projects";
 import { BackgroundBeamsWithCollisionDemo } from "./components/BackgroundBeamsWithCollisionDemo";
-
+import Preloader from "./components/Preloader";
 // studio.initialize();
 // studio.extend(extension);
 
@@ -15,13 +15,28 @@ import { BackgroundBeamsWithCollisionDemo } from "./components/BackgroundBeamsWi
 
 function App() {
   const sceneContext = useContext(LaptopContext);
+  const [timeout, setLoadertimeout] = useState(true);
 
+  setTimeout(() => {
+    setLoadertimeout(false);
+  }, 7000);
   return (
-    <div className="w-screen">
-      <LaptopScene />
+    <div className="relative w-screen">
       <div
-        className={`absolute top-0 left-0 ${
-          sceneContext.showModel ? "hidden" : "flex flex-col"
+        className={`${
+          timeout ? "block absolute top-0 left-0 z-50 w-screen" : "hidden"
+        }`}
+      >
+        <Preloader />
+      </div>
+      <div className={`absolute left-0 w-screen z-1 ${timeout?"top-[-1000rem]":"top-0"}`}>
+        <LaptopScene />
+      </div>
+      <div
+        className={`absolute  ${
+          sceneContext.showModel
+            ? "top-[-1000rem]"
+            : "flex flex-col top-0 left-0"
         } overflow-hidden `}
       >
         {/* <div> */}

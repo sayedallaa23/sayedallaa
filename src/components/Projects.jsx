@@ -10,9 +10,9 @@ function Projects() {
             <LampDemo/>
             <div className='absolute bottom-0 left-0 w-[100%]'>
                 <div className='items-start justify-center hidden gap-4 mx-auto md:flex'>
-                <ThreeDCardDemo websiteName="popcornTv" websiteDis="PopcornTV is a movie and TV platform , offering a wide database of films and series with synopses, ratings, and personalized recommendations." websiteImg="/popcorn2-min.png" websiteLink="www.google.com"/>
-                <ThreeDCardDemo websiteName="PopcornTv" websiteDis="PopcornTV is a movie and TV platform , offering a wide database of films and series with synopses, ratings, and personalized recommendations." websiteImg="/popcorn2-min.png" websiteLink="https://popcorn-tv-seven.vercel.app/"/>
-                <ThreeDCardDemo websiteName="Kicks" websiteDis="Kicks is an e-commerce site for shoes, featuring a variety of styles, easy navigation, and customer reviews." websiteImg="/kicks-min.png" websiteLink="https://kicks-kappa.vercel.app/"/>
+                <ThreeDCardDemo websiteName="popcornTv" websiteDis="PopcornTV is a movie and TV platform , offering a wide database of films and series with synopses, ratings, and personalized recommendations." websiteImg="/popcorn22.jpg" websiteLink="www.google.com"/>
+                <ThreeDCardDemo websiteName="PopcornTv" websiteDis="PopcornTV is a movie and TV platform , offering a wide database of films and series with synopses, ratings, and personalized recommendations." websiteImg="/popcorn22.jpg" websiteLink="https://popcorn-tv-seven.vercel.app/"/>
+                <ThreeDCardDemo websiteName="Kicks" websiteDis="Kicks is an e-commerce site for shoes, featuring a variety of styles, easy navigation, and customer reviews." websiteImg="/kicks22.jpg" websiteLink="https://kicks-kappa.vercel.app/"/>
                 </div>
                 <div className='md:hidden'>
                 <AnimatedTestimonialsDemo/>
