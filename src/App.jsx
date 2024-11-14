@@ -17,9 +17,12 @@ function App() {
   const sceneContext = useContext(LaptopContext);
   const [timeout, setLoadertimeout] = useState(true);
 
-  setTimeout(() => {
-    setLoadertimeout(false);
-  }, 7000);
+  useEffect(()=>{
+    setTimeout(() => {
+      setLoadertimeout(false);
+    }, 7000);
+  })
+
   return (
     <div className="relative w-screen">
       <div
