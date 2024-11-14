@@ -224,7 +224,7 @@ function LaptopScene() {
                   setShowModel={sceneContext.setShowModel}
                 />
               </group>
-              <Environment preset="city" />
+              <Environment files={"/city.hdr"} />
             </Suspense>
             <ContactShadows
               position={[0, -4.5, 0]}
