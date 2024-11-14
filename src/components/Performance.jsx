@@ -132,7 +132,8 @@ function Performance() {
         <LightContextProvider>
           <Canvas ref={performanceRef}>
             <PerspectiveCamera position={[0, 35, 110]} makeDefault />
-            <Environment preset={isMobile?"forest":"night"} />
+            {/* <Environment preset={isMobile?"city":"night"} /> */}
+            <Environment files={isMobile?"/city.hdr":"/night.hdr"} />
             <LightWithMouse />
             <pointLight position={[10, 20, 0]} intensity={0.3} />
             <pointLight position={[10, -20, 0]} intensity={0.3} />

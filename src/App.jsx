@@ -16,13 +16,11 @@ import Preloader from "./components/Preloader";
 function App() {
   const sceneContext = useContext(LaptopContext);
   const [timeout, setLoadertimeout] = useState(true);
-
-  useEffect(()=>{
-    setTimeout(() => {
-      setLoadertimeout(false);
-    }, 7000);
-  })
-
+  
+  setTimeout(() => {
+    setLoadertimeout(false);
+  }, 7000);
+  
   return (
     <div className="relative w-screen">
       <div

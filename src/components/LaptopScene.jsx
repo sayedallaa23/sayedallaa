@@ -32,9 +32,11 @@ if (import.meta.env.DEV) {
   studio.initialize();
   studio.extend(extension);
 }
-import demoProjectState from './th.json'
+import demoProjectState from "./th.json";
 
-const demoSheet = getProject("Demo Project", { state: demoProjectState }).sheet("Demo Sheet");
+const demoSheet = getProject("Demo Project", { state: demoProjectState }).sheet(
+  "Demo Sheet"
+);
 
 function Model({ open, hinge, showModel, setShowModel, ...props }) {
   const group = useRef();
@@ -203,7 +205,13 @@ function LaptopScene() {
                 onClick={(e) => (e.stopPropagation(), setOpen(!open))}
               >
                 <Html transform scale={2} position={[0, 7, 0]}>
-                  <h1 className={`${!open ? "flex text-[1.2rem] md:text-[2rem] lg:text-[3rem]" : "hidden"}`}>
+                  <h1
+                    className={`${
+                      !open
+                        ? "flex text-[1.2rem] md:text-[2rem] lg:text-[3rem]"
+                        : "hidden"
+                    }`}
+                  >
                     Open Your Laptop
                   </h1>
                   <h1 className={`${open ? "flex" : "hidden"}`}>Scroll</h1>

@@ -41,7 +41,8 @@ function TimeLines() {
       <div className="h-[30vh] xl:h-[100vh] w-[50%]">
         <Canvas>
           <PerspectiveCamera position={[0, 0, 1.5]} makeDefault />
-          <Environment preset="studio" />
+          {/* <Environment preset="city" /> */}
+          <Environment files={"/city.hdr"} />
           <PresentationControls
             global
             config={{ mass: 2, tension: 500 }}
