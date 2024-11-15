@@ -30,7 +30,7 @@ export const Skills = () => {
           rotation={[0, 0.3, 0]}
           polar={[-Math.PI / 3, Math.PI / 3]}
           azimuth={[-Math.PI / 1.4, Math.PI / 2]}
-          speed={1}
+          speed={2}
         >
           <Rig rotation={[0, 0, 0.15]}>
             <Carousel />

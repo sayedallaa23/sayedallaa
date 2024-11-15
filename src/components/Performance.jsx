@@ -113,10 +113,10 @@ function Performance() {
   );
 
   return (
-    <div className="flex justify-between h-[100dvh] lg:h-[100vh]">
+    <div className="flex justify-between items-center h-[100dvh] lg:h-[100vh]">
       <div className="ml-[2rem] mt-[4rem]">
         <div className="">
-          <div className="md:mb-[6rem] mb-[8rem]">
+          <div className="">
             <FlipWordsDemo />
           </div>
           <div className="w-[100%] md:w-[70%]">

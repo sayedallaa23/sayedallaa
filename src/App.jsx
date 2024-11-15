@@ -19,7 +19,7 @@ function App() {
   
   setTimeout(() => {
     setLoadertimeout(false);
-  }, 7000);
+  }, 4000);
   
   return (
     <div className="relative w-screen">
