@@ -3,6 +3,10 @@ import React from "react";
 import {Spotlight} from "../components/ui/Spotlight"
 
 export function SpotlightPreview() {
+  React.useEffect(() => {
+    // Scroll to the top when the component mounts
+    window.scrollTo(0, 0);
+  }, []);
   return (
     (<div
       className="h-[25rem] md:h-[40rem] w-full flex md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
