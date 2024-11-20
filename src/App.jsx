@@ -41,7 +41,7 @@ function App() {
         } overflow-hidden `}
       >
         {/* <div> */}
-        <div className="mainbody">
+        <div className="mainbody stars">
           <SpotlightPreview />
           <div className="text-center">
             <h1 className="text-4xl font-bold text-center text-transparent bg-opacity-50 md:text-6xl bg-clip-text bg-gradient-to-b from-neutral-50 to-neutral-400">

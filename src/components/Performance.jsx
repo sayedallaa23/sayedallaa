@@ -120,8 +120,8 @@ function Performance() {
             <FlipWordsDemo />
           </div>
           <div className="w-[100%] md:w-[70%]">
-            <p className=" text-neutral-600">
-              I love creating high-performance, visually appealing websites that
+            <p className=" text-[#a4a0a0]">
+              I love creating 3D high-performance, visually appealing websites that
               deliver a seamless user experience. I optimize speed,
               functionality, and design to meet customer needs and preferences.
             </p>

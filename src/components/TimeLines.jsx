@@ -32,7 +32,7 @@ function TimeLines() {
         <h1 className="font-bold text-transparent bg-opacity-50 md:text-6xl bg-clip-text bg-gradient-to-b from-neutral-50 to-neutral-400 text-[1.5rem]">
           Global Expertise, Local Impact
         </h1>
-        <p className="mt-[2rem] text-neutral-600">
+        <p className="mt-[2rem] text-[#a4a0a0]">
           I can bring your project to life no matter the timeline. I have the
           skills and experience to work seamlessly with teams around the world,
           delivering high-quality results on time and on budget.

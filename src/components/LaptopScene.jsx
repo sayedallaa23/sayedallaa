@@ -41,7 +41,7 @@ const demoSheet = getProject("Demo Project", { state: demoProjectState }).sheet(
 function Model({ open, hinge, showModel, setShowModel, ...props }) {
   const group = useRef();
   // Load model
-  const { nodes, materials } = useGLTF("/mac-draco.glb");
+  const { nodes, materials } = useGLTF("/mac-draco2.glb");
   // Take care of cursor state on hover
   const [hovered, setHovered] = useState(false);
 

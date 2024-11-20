@@ -62,12 +62,13 @@ html {
   font-family: "Geist", sans-serif !important ;
 }
 
+.stars {
+  background-color: #000000;
+  background-image: url("/stardust.png") !important;
+}
 
-
-.mainbody{
-  background-color: rgb(0, 0, 0) ;
-
-
+.mainbody {
+  background-color: rgb(0, 0, 0);
 }
 
 .ah00 {
