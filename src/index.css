@@ -60,6 +60,7 @@ html {
   overflow-x: hidden;
   background-color: rgba(0, 0, 0, 0.96);
   font-family: "Geist", sans-serif !important ;
+  scroll-behavior: smooth;
 }
 
 .stars {

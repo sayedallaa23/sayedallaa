@@ -6,16 +6,16 @@ export function AnimatedTestimonialsDemo() {
       quote:
         "PopcornTV is a movie and TV platform , offering a wide database of films and series with synopses, ratings, and personalized recommendations.",
       name: "Sarah Chen",
-      designation: "PopcornTV",
-      src: "/popcorn22.jpg",
-      link: "https://popcorn-tv-seven.vercel.app/",
+      designation: "PlushPalace",
+      src: "/plushpalace2.jpg",
+      link: "https://plush-palace.vercel.app/",
     },
     {
       quote:
         "PopcornTV is a movie and TV platform , offering a wide database of films and series with synopses, ratings, and personalized recommendations.",
       name: "Michael Rodriguez",
       designation: "PopcornTV",
-      src: "/popcorn22.jpg",
+      src: "/popcorn3.jpg",
       link: "https://popcorn-tv-seven.vercel.app/",
     },
     {
