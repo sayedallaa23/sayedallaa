@@ -4,7 +4,7 @@ export function AnimatedTestimonialsDemo() {
   const testimonials = [
     {
       quote:
-        "PopcornTV is a movie and TV platform , offering a wide database of films and series with synopses, ratings, and personalized recommendations.",
+        "PlushPalace is a 3D furniture agency landing page showcases innovative designs with interactive displays and a seamless user experience.",
       name: "Sarah Chen",
       designation: "PlushPalace",
       src: "/plushpalace2.jpg",
