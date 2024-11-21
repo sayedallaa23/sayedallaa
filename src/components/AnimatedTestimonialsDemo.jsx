@@ -12,7 +12,7 @@ export function AnimatedTestimonialsDemo() {
     },
     {
       quote:
-        "PopcornTV is a movie and TV platform , offering a wide database of films and series with synopses, ratings, and personalized recommendations.",
+        "PopcornTV is a movie and TV platform , offering a wide database of films and series with synopses, ratings, and personalised recommendations.",
       name: "Michael Rodriguez",
       designation: "PopcornTV",
       src: "/popcorn3.jpg",
